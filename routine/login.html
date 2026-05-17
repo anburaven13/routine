@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Tracker - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="login.html" class="active">Login / Signup</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Welcome Back</h1>
+            <p class="date-display">Sign in to manage your routine</p>
+        </header>
+
+        <main>
+            <div class="glass-card" style="flex-direction: column; max-width: 400px; margin: 0 auto; gap: 20px;">
+                <form id="authForm" style="width: 100%;">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" id="submitBtn">Sign In</button>
+                    <p id="errorMsg" style="color: #f9a8d4; font-size: 0.9rem; margin-top: 10px; display: none;"></p>
+                </form>
+                <div style="text-align: center; width: 100%;">
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                        Don't have an account? 
+                        <a href="#" id="toggleMode" style="color: var(--accent); text-decoration: none;">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="data.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

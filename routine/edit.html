@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Tracker - Edit Schedule</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .edit-block {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+        }
+        .edit-block input, .edit-block select {
+            padding: 8px 12px;
+            margin: 0;
+            flex: 1;
+        }
+        .btn-danger {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            width: auto;
+            padding: 8px 12px;
+            margin: 0;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+        .btn-danger:hover {
+            background: rgba(239, 68, 68, 0.4);
+        }
+        .add-btn {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            margin-top: 20px;
+        }
+        .save-btn {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="weekly.html">Weekly Overview</a>
+        <a href="edit.html" class="active">Edit Schedule</a>
+        <a href="#" onclick="logout(); return false;">Log out</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Edit Schedule</h1>
+            <p class="date-display">Customize your routine</p>
+        </header>
+
+        <div class="day-selector" id="daySelector">
+            <!-- Day buttons injected here -->
+        </div>
+
+        <div class="glass-card" style="flex-direction: column; align-items: stretch;">
+            <h2 id="currentDayTitle" style="margin-bottom: 20px; text-align: center;">Monday</h2>
+            
+            <div id="editBlocksContainer">
+                <!-- Editable blocks injected here -->
+            </div>
+            
+            <button class="add-btn" id="addBlockBtn">+ Add New Block</button>
+            <button class="save-btn" id="saveBtn">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="data.js"></script>
+    <script src="edit.js"></script>
+</body>
+</html>

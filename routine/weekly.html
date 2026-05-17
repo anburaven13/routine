@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Tracker - Weekly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .weekly-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .day-column {
+            background: rgba(0,0,0,0.2);
+            border-radius: 24px;
+            padding: 20px;
+            border: 1px solid var(--glass-border);
+        }
+        .day-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        .mini-card {
+            background: var(--glass-bg);
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            border: 1px solid var(--glass-border);
+        }
+        .mini-time { font-size: 0.8rem; color: var(--text-secondary); }
+        .mini-title { font-size: 1rem; margin: 4px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="weekly.html" class="active">Weekly Overview</a>
+        <a href="edit.html">Edit Schedule</a>
+        <a href="#" onclick="logout(); return false;">Log out</a>
+    </nav>
+
+    <div class="container" style="max-width: 1200px;">
+        <header>
+            <h1>Weekly Overview</h1>
+            <p class="date-display">Your master study schedule</p>
+        </header>
+
+        <main class="weekly-grid" id="weeklyContainer">
+            <!-- Weekly columns injected here -->
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="data.js"></script>
+    <script src="weekly.js"></script>
+</body>
+</html>

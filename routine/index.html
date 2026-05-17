@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Tracker - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="weekly.html">Weekly Overview</a>
+        <a href="edit.html">Edit Schedule</a>
+        <a href="#" onclick="logout(); return false;">Log out</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Today's Routine</h1>
+            <p class="date-display" id="dateDisplay"></p>
+        </header>
+
+        <main id="routineContainer">
+            <!-- Routine blocks will be injected here via JS -->
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
